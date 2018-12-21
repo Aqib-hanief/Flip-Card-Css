@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background: #838383;
+}
+
+.container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+}
+
+.middle {
+    position: relative;
+    margin: 70px 20px;;
+}
+
+.card {
+    cursor: pointer;
+    width: 340px;
+    height: 430px;
+    
+}
+
+.front, .back{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fb{
+     background: #1f355d;
+}
+
+.in {
+    background: #d63031;
+}
+
+.tw {
+    background: #6c5ce7;
+}
+
+.front p{
+    color:white;
+    text-align: center;
+    font-size: 5em;
+}
+
+.front h1{
+    color:white;
+    font-size: 2em;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content {
+    color:#2c3e50;
+    text-align: center;
+    width: 100%;
+}
+
+.card:hover > .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.tweet p, .face p, .insta p {
+    font-size: 3em;
+    padding: 10px;
+    color:#333;
+}
+.frm-grp{
+    padding: 7px;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border: 1px solid gray ;
+    outline: none;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border:none;
+    outline: none;
+    background: #303952;
+    color:#fff;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.insta input[type="submit"] {
+    background: #d63031;
+}
+
+.insta input[type="submit"]:hover {
+    background-color: hsl(360, 67%, 31%);
+    transition: .3s;
+}
+
+.tweet input[type="submit"] {
+    background: #6c5ce7;
+}
+
+.tweet input[type="submit"]:hover {
+    background-color: hsl(247, 74%, 53%);
+    transition: .3s;
+}
+
+.face input[type="submit"] {
+    background: #1f355d;
+}
+
+.face input[type="submit"]:hover {
+    background-color: hsl(219, 50%, 14%);
+    transition: .3s;
+}
